@@ -1,3 +1,14 @@
+@font-face {
+  font-family: headstone;
+  src: url(./fonts/Headstone\ DEMO.ttf)
+}
+
+@font-face {
+  font-family: headstone_itallics;
+  src: url(./fonts/Headstone\ Italic\ DEMO.ttf)
+}
+
+
 body {
     background-image: url("/images/background.png");
     background-repeat: repeat;
@@ -6,6 +17,7 @@ body {
     min-height: 400px;
     align-items: center;
     justify-items: center;
+    font-family: "headstone", "Courier New", monospace;
 }
 
 .container {
@@ -13,7 +25,7 @@ body {
     height: 95vh;
     min-height: 380px;
     width: 94%;
-    min-width: 900x;
+    min-width: 900px;
     margin: 0 2% 0 auto;
     border: solid 10px black;
     border-radius: 10px;
@@ -103,6 +115,16 @@ body {
     top: 0;
 }
 
+.sun-caption {
+    position: absolute;
+    left: 11vh;
+    width: 11vh;
+    z-index: 9;
+    display: none;
+    pointer-events: none;
+    font-size: 3vh;
+}
+
 .sun img, .sun-blink img {
     height: 20vh;
     min-height: 50px;
@@ -110,16 +132,16 @@ body {
 }
 
 .sun-blink img {
-    opacity: 0;
+    display: none;
 }
 
-.sun-wrapper:hover .sun-blink img {
-    opacity: 1;
+.sun-wrapper:hover .sun-blink img, .sun-wrapper:hover .sun-caption {
+    display: block;
 }
 
 .flowers {
     position: absolute;
-    right: 14%;
+    left: 30%;
     bottom: 17%;
     z-index: 5;
 }
@@ -160,11 +182,12 @@ body {
 
 .dovecot-wrapper {
     position: absolute;
-    bottom: 29%;
-    right: 34%;
-    height: 25vh;
-    min-height: 200px;
+    bottom: 40%;
+    width: 150px;
+    height: 150px;
+    right: 45%;
     z-index: 4;
+    border: dashed 3px blue;
 }
 
 .dovecot-main, .dovecot-hover {
@@ -173,21 +196,33 @@ body {
     top: 0;
 }
 
+.dovecot-text {
+
+}
+
+.dovecot-caption {
+    position: absolute;
+    bottom: 40%;
+    height: 150px;
+    width: 150px;
+    right: 45%;
+    z-index: 9;
+    border: dashed 5px red;
+    display: block;
+    pointer-events: none;
+    font-size: 40px;
+}
+
 .dovecot-main img, .dovecot-hover img {
     height: 35vh;
-    min-height: 250px;
-}
-
-.dovecot-wrapper:hover .dovecot-main img {
-    opacity: 0;
-}
-
-.dovecot-wrapper:hover .dovecot-hover img {
-    opacity: 1;
+    min-height: 350px;
 }
 
 .dovecot-hover img {
-    opacity: 0;   
+    display: none;   
+}
+.dovecot-wrapper:hover .dovecot-hover img, .dovecot-wrapper:hover .dovecot-caption {
+    display: block;
 }
 
 .floor {
