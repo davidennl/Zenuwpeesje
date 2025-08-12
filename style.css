@@ -71,7 +71,8 @@ body {
     margin: 0 2% 0 auto;
     border: solid 10px black;
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 100;
+    overflow: hidden;
 }
 
 .dovecot-caption {
