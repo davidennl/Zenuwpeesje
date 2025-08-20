@@ -96,8 +96,8 @@ body {
 }
 
 .dovecot-main img, .dovecot-hover img {
-    height: 35vh;
-    min-height: 320px;
+    height: 50vh;
+    min-height: 450px;
 }
 
 .dovecot-text {
@@ -110,11 +110,11 @@ body {
 
 .dovecot-wrapper {
     position: absolute;
-    bottom: 16%;
+    bottom: 20%;
     width: 250px;
     height: 300px;
     right: 10%;
-    z-index: 4;
+    z-index: 9;
 }
 
 .dovecot-wrapper:hover .dovecot-hover img,
