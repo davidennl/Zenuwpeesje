@@ -21,7 +21,6 @@ body {
     margin: 3% 5%;
     background-color: hsla(0 100% 100% / 0.3);
     border-radius: 15px;
-    border: dotted blue 1px;
     overflow: hidden;
 }
 
@@ -29,42 +28,63 @@ body {
   height: 100%;
   width: 100%;
   padding: 20px;
+  position: relative;
 }
 
 .topnav {
   display: flex;
-  height: 50px;
+  height: 58px;
   justify-items: center;
-  background-color: lightgrey;
-  column-gap: 20%;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .topnav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+  width: 15%;
+  height: 50px;
+  margin: 4px 2px;
   color: black;
+  border-radius: 15px;
+  text-decoration: none;
 }
 
 .topnav a:hover {
   background: lightgrey;
-  border: white solid 1px;  
+  color: midnightblue;  
+}
+
+.active-tab {
+  background: lightgrey;
+  color: midnightblue;   
 }
 
 .image-container {
-  height: 500px;
-  position: relative;
-  float: right;
-  margin: 15px;
-  width: 500px;
+  height: 45%;
+  position: absolute;
+  width: 25%;
+  right: 5%;
+  top: 0;
+  border: red dashed 4px;
 }
 
-.image-still {
+.sofa-container {
+  height: 36%;
+  width: 40%;
+  max-width: 400px;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  border: blue dashed 4px;
+}
+
+.image-still, .sofa-still {
   display: block;
 }
 
-.image-hover {
+.image-hover, .sofa-hover {
   display: none;
   position: absolute;
   top: 0;
@@ -72,15 +92,26 @@ body {
   width: 100%;
 }
 
-.image-still img, .image-hover img {
+.image-still img, .image-hover img, .sofa-still img, .sofa-hover img {
   width: 100%;
   display: block;
 }
 
-.image-container:hover .image-hover {
+.image-container:hover .image-hover, .sofa-container:hover .sofa-hover {
   display: block;
 }
 
-.image-container:hover .image-still {
+.image-container:hover .image-still, .sofa-container:hover .sofa-still {
   display: none;
+}
+
+@media (max-width: 850px) {
+  .image-container {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  .topnav a {
+    width: 30%;
+  }
 }
