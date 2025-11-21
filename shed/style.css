@@ -23,6 +23,32 @@
             line-height: 1.6;
         }
 
+        .pagesplit {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: row;
+            align-items: stretch;
+            margin-bottom: 2%;
+            margin-top: 2%;
+            min-height: 100vh;
+        }
+
+        .feed {
+            max-width: 40%;
+            margin: 0 auto 0 2%;
+            height: 100%;
+            overflow-y:auto;          
+        }
+
+        .sticky {
+            margin: 0 2% 0 2%;
+            position: fixed;
+            width: 55%;
+            left: 42%;
+            height: 92%;
+        }
+
         nav {
             background-image: url("/images/meadow.png");
             padding: 1.5rem 2rem;
@@ -49,12 +75,6 @@
 
         nav a:hover {
             color: #d3aa4b;
-        }
-
-        main {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 3rem 2rem;
         }
 
         .post {
@@ -128,7 +148,38 @@
             border: 1px solid #d4c5a9;
         }
 
-        /* Responsive */
+
+        .sofa, .sofa-blink {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .sofa img, .sofa-blink img {
+            height: 30vh;
+            min-height: 250px;
+        }
+
+        .sofa-blink img {
+            display: none;
+        }
+
+        .sofa-wrapper {
+            position: absolute;
+            left: 5%;
+            bottom: 10%;
+            width: 30vh;
+            height: 30vh;
+        }
+
+        .sofa-wrapper:hover .sofa-blink img, .sofa-wrapper:focus-within .sofa-blink img {
+            display: block
+        }
+
+        .sofa-wrapper:hover .sofa img, .sofa-wrapper:focus-within .sofa img {
+            display: none
+        }
+
         @media (max-width: 768px) {
             main {
                 padding: 2rem 1rem;
