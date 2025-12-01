@@ -322,12 +322,17 @@ p {
 /* Tag */
 .tag {
     background-image: url(../images/background.png);
-    border: 2px solid #2f7b94;
-    border-radius: 3px;
+    border: 3px solid #2f7b94;
+    border-radius: 15px;
     color: #4a3f2e;
     font-size: 0.85em;
     padding: 0.3em 0.5em;
     cursor: pointer;
+
+}
+
+.tag:hover {
+    border: dotted;
 }
 
 /* Media Queries */
@@ -421,6 +426,11 @@ p {
 
     .post-title {
         font-size: 35px;
+    }
+
+    .tag {
+        padding: 8px;
+        font-size: 12px;
     }
 
 }
