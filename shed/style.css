@@ -372,8 +372,8 @@ p {
     }
 
     .portrait-wrapper {
-        left: 4%;
-        top: 4%;
+        left: 8%;
+        top: 6%;
     }
 
     .portrait-still img, .portrait-hover img {
@@ -408,7 +408,7 @@ p {
     }
 
     .post-summary p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .post-summary::first-letter {
