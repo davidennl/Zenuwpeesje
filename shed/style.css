@@ -34,7 +34,7 @@ body {
     background-size: 500px;
     color: #2c2416;
     font-family: 'text';
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 p {
@@ -50,21 +50,30 @@ p {
     flex-direction: row;
     gap: 5%;
     justify-content: center;
-    margin: 4% auto 4% auto;
+    margin: 2% auto 0 auto;
     text-align: center;
     width: 90%;
 }
 
+.left-side {
+    position: sticky;
+    display: flex;
+    flex-direction:column;
+    top: 2%;
+    height: 88vh;
+    gap: 3%;
+    min-width: 470px;
+    overflow: hidden;
+}
+
 /* Framework */
 .framework {
-    position: sticky;
-    top: 4%;
+    position: relative;
+    height: 80%;
+    overflow: hidden;
     background-image: url(../images/background.png);
     border: 6px solid #eabb2d;
-    flex: 1;
-    height: 88vh;
-    min-width: 550px;
-    overflow: hidden;
+    flex-grow: 1;
 }
 
 /* Chair */
@@ -72,8 +81,8 @@ p {
     position: absolute;
     left: 5%;
     bottom: 5%;
-    height: 40vh;
-    width: 40vh;
+    height: 280px;
+    width: 280px;
     z-index: 8;
 }
 
@@ -84,8 +93,7 @@ p {
 }
 
 .chair-still img {
-    height: 40vh;
-    min-height: 250px;
+    max-width: 280px;
 }
 
 .chair-hover {
@@ -96,8 +104,7 @@ p {
 
 .chair-hover img {
     display: none;
-    height: 40vh;
-    min-height: 250px;
+    max-width: 280px;
 }
 
 .chair-wrapper:hover .chair-hover img,
@@ -113,11 +120,11 @@ p {
 /* Desk */
 .desk-wrapper {
     position: absolute;
-    right: 0;
+    right: -5%;
     bottom: 15%;
-    height: 50vh;
+    height: 400px;
     width: 150px;
-    z-index: 8;
+    z-index: 10;
 }
 
 .desk-still {
@@ -128,7 +135,7 @@ p {
 
 .desk-still img {
     height: 50vh;
-    max-height: 450px;
+    max-height: 400px;
     min-height: 180px;
 }
 
@@ -141,7 +148,7 @@ p {
 .desk-hover img {
     display: none;
     height: 50vh;
-    max-height: 450px;
+    max-height: 400px;
     min-height: 180px;
 }
 
@@ -219,7 +226,7 @@ p {
     display: none;
     padding: 0 10px;
     pointer-events: none;
-    width: 180px;
+    width: 150px;
     z-index: 9;
 }
 
@@ -227,7 +234,7 @@ p {
     border: none;
     color: #3d3428;
     font-family: 'itallics';
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -247,15 +254,61 @@ p {
 .quote {
     color: #3d3428;
     font-family: 'text';
-    font-size: 25px;
+    font-size: 20px;
     margin-top: -20px;
-    text-align: right;
+    text-align: center;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: #d34d00 solid 6px;
+    position: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 8%;
+    min-height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  height: 100%;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  font-family: "title";
+  border: 16px transparent solid;
+  padding: 0;
+}
+
+.menu-item a:hover {
+    padding: 10px 14px;
+    border-radius: 3px;
+    border: #2f7b94 dotted 2px;
+    height: 100%;
+    background: lightgrey;
+}
+
+.even:hover {
+    rotate: -4deg;
+}
+
+.odd:hover {
+    rotate: 4deg;
 }
 
 /* Feed */
 .feed {
     display: flex;
-    flex: 1;
+    flex: 3;
     flex-direction: column;
     height: fit-content;
     min-width: 50%;
@@ -359,13 +412,22 @@ p {
         width: 90%;
     }
 
-    .framework {
+    .left-side {
         display: block;
         margin-top: 25px;
-        min-height: 450px;
         min-width: 1px;
         position: relative;
         width: 100%;
+        height: fit-content;
+    }
+
+    .framework {
+        max-height: 350px;
+        min-height: 350px;
+    }
+
+    .menu {
+        height: 150px;
     }
 
     .chair-wrapper {
@@ -373,18 +435,25 @@ p {
     }
 
     .desk-wrapper {
-        right: 5%;
-        bottom: 70px;
+        right: 0;
+        bottom: 20px;
         height: 200px;
         width: 75px;
     }
 
     .desk-still img, .desk-hover img {
-        height: 240px;
+        height: 200px;
     }
 
     .floor img {
         width: 100%;
+    }
+
+    .menu {
+        margin-top: 20px;
+        height: 60px;
+        font-size: 13px;
+        padding: 5px 8px;
     }
 
     .portrait-wrapper {
@@ -393,21 +462,21 @@ p {
     }
 
     .portrait-still img, .portrait-hover img {
-        height: 200px;
-        max-height: 100px;
-        min-height: 200px;
+        height: 180px;
+        max-height: 180px;
+        min-height: 180px;
     }
 
     .portrait-caption {
         left: auto;
         right: -80px;
         top: -10px;
-        max-width: 110px;
-        z-index: 2;
+        max-width: 100px;
+        z-index: 0;
     }
 
     .portrait-text, .quote {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .post {
@@ -442,6 +511,10 @@ p {
     .tag {
         padding: 8px;
         font-size: 12px;
+    }
+
+    .top {
+        display: none;
     }
 
 }
