@@ -35,10 +35,16 @@ body {
     height: 100%;
     justify-items: center;
     min-height: 500px;
+
+/* Css variables - Main layout */
+
+    --container-height: 94vh;
+    --container-width: calc(var(--container-height) * 18 / 9);
 }
 
-/* Container - CSS Variables defined here */
+/* Container - CSS Variables */
 .container {
+
     /* Position variables for interactive elements */
     --dovecot-right: 10%;
     --dovecot-bottom: 18%;
@@ -50,16 +56,30 @@ body {
     --sun-top: 30%;
     
     position: relative;
-    border: solid 10px black;
-    border-radius: 10px;
-    height: 94vh;
+    top: 2vh;
+    height: var(--container-height);
     margin: auto;
-    max-width: 1800px;
-    min-height: 600px;
-    min-width: 1100px;
+    min-height: 800px;
+    max-height: 1000px;
+    min-width: 1420px;
+    max-width: 1750px;
     overflow: hidden;
-    width: 94vw;
+    width: var(--container-width);
     z-index: 100;
+}
+
+.frame {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 20;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Shared Caption Styles */
@@ -95,6 +115,7 @@ body {
     position: absolute;
     align-items: center;
     bottom: 10%;
+    left: -5px;
     height: 900px;
     max-width: 100%;
     overflow-x: hidden;
