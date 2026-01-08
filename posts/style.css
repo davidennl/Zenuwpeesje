@@ -98,7 +98,7 @@ p {
 .post-meta {
     color: #6b5d4f;
     font-family: "itallics";
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 5%;
     text-align: center;
 }
@@ -113,10 +113,10 @@ p {
 .paragraph:first-letter {
     float: left;
     font-family: 'initial', 'Courier New', Courier, monospace;
-    font-size: 110px;
-    line-height: 1;
-    margin-bottom: -0.3em;
-    margin-right: 0.1em;
+    font-size: 7em;
+    margin-top: 30px;
+    padding: 25px 15px 25px 0;
+    line-height: 0;
 }
 
 .post-tags {

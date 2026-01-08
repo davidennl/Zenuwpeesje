@@ -349,11 +349,11 @@ p {
 
 .paragraph:first-letter {
     float: left;
-    font-family: 'initial';
-    font-size: 110px;
-    line-height: 1;
-    margin-bottom: 0;
-    margin-right: 10px;
+    font-family: 'initial', 'Courier New', Courier, monospace;
+    font-size: 7em;
+    margin-top: 20px;;
+    padding: 25px 15px 25px 0;
+    line-height: 0;
 }
 
 .post-tags {
