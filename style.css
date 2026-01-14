@@ -353,21 +353,13 @@ body {
     z-index: 9;
 }
 
-.house-link {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .house-wrapper:hover .house-hover img,
 .house-wrapper:focus-within .house-hover img {
     display: block;
 }
 
-.house-wrapper:hover .house-caption-wrapper,
-.house-wrapper:focus-within .house-caption {
+.house-wrapper:hover + .house-caption-wrapper,
+.house-wrapper:focus-within + .house-caption {
     display: block;
 }
 
