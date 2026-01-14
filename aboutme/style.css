@@ -103,14 +103,16 @@ p {
 }
 
 .text {
-    padding: 0 15px;
+    padding: 0 20px;
     font-size: 16px;
 }
 
 .title {
     text-align: center;
+    padding: 10px 20px;
     font-family: "title";
-    font-size: 26px;
+    font-size: 45px;
+    margin: 0 0 -15px 0;
 }
 
 .paragraph::first-letter {
@@ -157,7 +159,7 @@ p {
     top: 20%;
     right: 20%;
     height: 240px;
-    width: 180px;
+    width: 160px;
     z-index: 2;
     overflow: hidden;
 }
@@ -277,7 +279,7 @@ p {
     .sun-wrapper {
         position: absolute;
         right: 17%;
-        top: 15%;;
+        top: 15%;
         height: 120px;
         width: 120px;
     }
@@ -330,7 +332,7 @@ p {
         height: 120px;
     }
         
-        .text {
+    .text {
         font-size: 14px;
     }
 
