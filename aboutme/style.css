@@ -68,6 +68,13 @@ p {
 }
 
 /* Layout */
+
+.screen {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 .back-wrapper {
     position: fixed;
     right: 4%;
@@ -90,7 +97,7 @@ p {
     height: fit-content;
     width: 300px;
     height: 480px;
-    top: 40%;
+    bottom: 15%;
     right: 65%;
     z-index: 2;
 }
@@ -157,7 +164,7 @@ p {
     outline: 8px solid #2f7b94;
     position: absolute;
     top: 20%;
-    right: 20%;
+    left: 70%;
     height: 240px;
     width: 160px;
     z-index: 2;
@@ -172,7 +179,7 @@ p {
 /* Frame Items */
 .cloud {
     position: absolute;
-    left: 5%;
+    left: 15%;
     top: 2%;
 }
 
@@ -323,21 +330,45 @@ p {
 
     .back-wrapper {
         position: fixed;
-        right: 10px;
-        bottom: 10px;
-        height: 120px;
+        right: 30px;
+        bottom: 30px;
+        height: 140px;
+        z-index: 20;
     }
     
     .back-wrapper img {
-        height: 120px;
+        height: 100%;
+    }
+
+    .caption-box {
+        display: block;
+        position: static;
+        margin: auto;
+        height: fit-content;
+    }
+
+    .frame {
+        display: none;
+    }
+
+    .photo {
+        display: none;
     }
         
     .text {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .paragraph::first-letter {
         font-size: 50px;
+    }
+
+    .screen {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .title {
